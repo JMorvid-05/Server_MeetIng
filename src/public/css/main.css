@@ -1,0 +1,98 @@
+
+body {
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, rgb(127, 130, 163));
+
+}
+
+nav.navbar {
+    background: #150e2b !important;
+}
+.col-md-3{
+    padding-top: 10px;
+}
+#divl{
+    text-align: center;
+}
+.regis{
+    font-family: 'Gudea';
+    font-size: 25px;
+    color: #34495E ;
+}
+body{
+    font-family: 'Adamina';
+    font-size: 16px;
+}
+.form-control{
+    border-radius: 7px 15px 7px 10px;
+    color: #5F6A6A   ;
+}
+.form-control:focus{
+
+    outline: none ;
+    box-shadow: 0 0 7px #5D6D7E   ;
+}
+.card{
+    border-radius: 10px 30px 20px 30px;
+}
+.btn{
+    text-align: center;
+    width: 100%;
+    background-color:#B3B6B7  ;
+    color:  #1B2631   ;
+    border-radius: 10px;
+    transition: 0.7s;
+    border: none;
+}
+.btn:hover{
+    color:#F8F9F9   ;
+    background-color: #616A6B  ;
+
+}
+.btnd{
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px 10px;
+    padding:10px;
+    margin-right: 10%;
+    background-color: #7B241C ;
+    color:#ECF0F1  ;
+}
+.btnd:hover{
+    text-decoration: none;
+    color:#F8F9F9;
+    background-color: #E74C3C  ;
+}
+.btnd{
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px 10px;
+    background-color: #7B241C ;
+    color:#ECF0F1  ;
+    position: relative;
+
+    
+
+}
+.btnd:hover{
+    text-decoration: none;
+    color:#F8F9F9;
+    background-color: #CB4335   ;
+}
+.btnu{
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px 10px;
+    padding: 10px;
+    background-color: #2E4053;
+    color:#ECF0F1 ;
+    position: absolute;
+    bottom: 3.2%;
+
+}
+.btnu:hover{
+    text-decoration: none;
+    color:#F8F9F9;
+    background-color: #5D6D7E;
+}
