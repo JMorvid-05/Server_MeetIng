@@ -1,0 +1,235 @@
+
+    <p style="text-align: center; color: aliceblue; font-size: 1.5em;">Seleccione la empresa cliente</p>
+    <div class="container-fluid">
+      <div class="row" style="margin-top:50px;">
+        <div class="col-xl-3 col-md-6 mb-2" *ngIf="country=='C'|| 'Cl'">
+          <div class="card border-left-green shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-white">ActiveIT</div>
+                  <hr>
+                  <img src="assets/AIT.png"style="width: 60%; height: 55px; position: relative;margin-left: 6%;">
+                </div>
+                <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+                  <button class="btn btn-white" type="button" (click)="saveclient('ActiveIT')" >
+                    <i class="fas fa-check-circle fa-2x text-black owo"></i>
+                  </button>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-2" *ngIf="country=='Cl'">
+          <div class="card border-left-red shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-white">Adessa </div>
+                  <hr>
+                  <img src="assets/adessa.png"
+                    style="width: 60%; height: 55px; position: relative;margin-left: 6%;">
+                </div>
+                <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+                  <button class="btn btn-white" type="button" (click)="saveclient('Adessa')" >
+                    <i class="fas fa-check-circle fa-2x text-black owo"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-2" *ngIf="country=='C'">
+          <div class="card border-left-yellow shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-white">ATH</div>
+                  <hr>
+                  <img src="assets/ath.png"
+                    style="width: 60%; height: 55px; position: relative;margin-left: 6%;">
+                </div>
+                <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+                  <button class="btn btn-white" type="button" (click)="saveclient('ATH')" >
+                    <i class="fas fa-check-circle fa-2x text-black owo"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-2" *ngIf="country=='RD'">
+          <div class="card border-left-blue shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-white">Banco Popular</div>
+                  <hr>
+                  <img
+                    src="assets/popular.png"
+                    style="width: 80%; height: 55px; position: relative;margin-left: 6%;">
+                </div>
+                <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+                  <button class="btn btn-white" type="button" (click)="saveclient('Banco Popular')" >
+                    <i class="fas fa-check-circle fa-2x text-black owo"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-2" *ngIf="country=='Cl'">
+          <div class="card border-left-red shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-white">Cencosud</div>
+                  <hr>
+                  <img
+                    src="assets/Cencosud.png"
+                    style="width: 60%; height: 55px; position: relative;margin-left: 6%;">
+                </div>
+                <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+                  <button class="btn btn-white" type="button" (click)="saveclient('Cencosud')" >
+                    <i class="fas fa-check-circle fa-2x text-black owo"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-2" *ngIf="country=='C'|| 'CR'">
+          <div class="card border-left-yellow shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-white">Davivienda</div>
+                  <hr>
+                  <img
+                    src="assets/davivienda.png"
+                    style="width: 65%; height: 55px; position: relative;margin-left: 6%;">
+                </div>
+                <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+                  <button class="btn btn-white" type="button" (click)="saveclient('Davivienda')" >
+                    <i class="fas fa-check-circle fa-2x text-black owo"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row" style="margin-top:50px;">
+        
+        
+        <div class="col-xl-3 col-md-6 mb-2" *ngIf="country=='Cl'">
+          <div class="card border-left-red shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-white">Falabella</div>
+                  <hr>
+                  <img
+                    src="assets/falabella.png"
+                    style="width: 75%; height: 55px; position: relative;margin-left: 6%;">
+                </div>
+                <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+                  <button class="btn btn-white" type="button" (click)="saveclient('Falabella')" >
+                    <i class="fas fa-check-circle fa-2x text-black owo"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-2" *ngIf="country=='Cl'">
+          <div class="card border-left-red shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-white">Homecenter</div>
+                  <hr>
+                  <img src="assets/homecenter.png"
+                    style="width: 65%; height: 55px; position: relative;margin-left: 6%;">
+                </div>
+                <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+                  <button class="btn btn-white" type="button" (click)="saveclient('Homecenter')" >
+                    <i class="fas fa-check-circle fa-2x text-black owo"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-2" *ngIf="country=='Cl'">
+          <div class="card border-left-red shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-white">Ticnow</div>
+                  <hr>
+                  <img src="assets/Ticnow.png"
+                    style="width: 55%; height: 55px; position: relative;margin-left: 6%;">
+                </div>
+                <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+                  <button class="btn btn-white" type="button" (click)="saveclient('Ticnow')" >
+                    <i class="fas fa-check-circle fa-2x text-black owo"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-2" *ngIf="country=='Cl'">
+          <div class="card border-left-red shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-white">TransBank</div>
+                  <hr>
+                  <img src="assets/tbk.png"
+                    style="width: 55%; height: 55px; position: relative;margin-left: 6%;">
+                </div>
+                <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+                  <button class="btn btn-white" type="button" (click)="saveclient('TransBank')" >
+                    <i class="fas fa-check-circle fa-2x text-black owo"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row" style="margin-top:50px;">
+        
+        
+        <div class="col-xl-3 col-md-6 mb-2" *ngIf="country=='Cl'">
+          <div class="card border-left-red shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-white">VTR</div>
+                  <hr>
+                  <img src="assets/VTR.png"
+                    style="width: 65%; height: 55px; position: relative;margin-left: 6%;">
+                </div>
+                <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+                  <button class="btn btn-white" type="button" (click)="saveclient('VTR')" >
+                    <i class="fas fa-check-circle fa-2x text-black owo"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    </div>
+

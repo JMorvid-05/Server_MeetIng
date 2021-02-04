@@ -1,0 +1,23 @@
+.sty{
+    border-top: 10px;
+    border: 1px solid #4e73df;
+    color: #4e73df;
+    margin-top:5% ;
+}
+.sty:hover{
+    border: 1px solid #4e73df;
+    color: #4e73df;
+    background: rgba(0,43,54,0.95);
+    
+}
+.owo{
+    
+    border: 1px solid #1cc88a;
+    color: #1cc88a;
+}
+.owo:hover{
+    border: 1px solid #1cc88a;
+    color: #1cc88a;
+    background: rgba(0,43,54,0.95);
+    
+}

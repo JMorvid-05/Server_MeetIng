@@ -1,0 +1,77 @@
+<div class="container p-4">
+    <p style="text-align: center; color: aliceblue; font-size: 1.5em;">Reporte de Horas</p>
+    <div *ngIf="countryC">
+        <app-hcountry (messend)="receive($event)"></app-hcountry>
+    </div>
+    
+    <div *ngIf="clientC" >
+        <app-hclient [country]="countryg" (messcli)="receive($event)"></app-hclient>
+    </div>
+    <div *ngIf="areaC">
+        <app-harea (messarea)="receive($event)"></app-harea>
+    </div>
+    <div *ngIf="datexeC">
+        <app-hdatexe (messdate)="receive($event)"></app-hdatexe>
+    </div>
+    <div *ngIf="projectC">
+        <app-hproject (messproj)="receive($event)"></app-hproject>
+    </div>
+    <div *ngIf="personqrC">
+        <app-hpersonqr [country]="countryg" (messperson)="receive($event)"></app-hpersonqr>
+    </div>
+    <div *ngIf="costC">
+        <app-hcost (messcost)="receive($event)"></app-hcost>
+    </div>
+    <div *ngIf="bac">
+        <button class="btn btn-white" style=" position: absolute;top: 15%;left: 20%;transform: translate(-50%, -50%); height: 65px;" (click)="back()">
+            <i class="fas fa-chevron-left fa-2x owo" style="color: aliceblue;"></i>
+            <p style="color:aliceblue;">Volver</p>
+          </button>
+    </div>
+    </div>
+    
+    
+    <!--
+    <div class="col-md-4 offset-md-2">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-group" >
+                        <input type="text" name="fname" [(ngModel)]="hour.country"placeholder="pais" class="form-control" autofocus autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="lname" [(ngModel)]="hour.client" placeholder="cliente" class="form-control" autofocus autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="cc"  [(ngModel)]="hour.area" placeholder="Área" class="form-control" autofocus autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="username" [(ngModel)]="hour.datexec" placeholder="Fecha" class="form-control" autofocus autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="username" [(ngModel)]="hour.project" placeholder="proyecto" class="form-control" autofocus autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="username" [(ngModel)]="hour.description" placeholder="descripción" class="form-control" autofocus autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="username" [(ngModel)]="hour.personqr" placeholder="persona que lo requiere" class="form-control" autofocus autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="username" [(ngModel)]="hour.email" placeholder="email" class="form-control" autofocus autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="username" [(ngModel)]="hour.hoursg" placeholder="horas " class="form-control" autofocus autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="username" [(ngModel)]="hour.files" placeholder="Archivo" class="form-control" autofocus autocomplete="off">
+                    </div>
+                
+                    <button class="btn btn-success btn-block" (click)="saveHour()">
+                        Guardar
+                    </button>
+                </form>
+            </div>
+        </div>   
+    </div>
+    -->

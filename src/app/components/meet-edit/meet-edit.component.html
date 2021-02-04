@@ -1,0 +1,87 @@
+
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title " style="text-align: center;" id="modal-basic-title"> <i class="fas fa-handshake"></i>
+            <label> Modificar Reunión</label>
+
+        </h4>
+        <button type="button" class="close" aria-label="Close" (click)="[close(content),modal.dismiss()]">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <form [formGroup]="inputsForm">
+    <div class="modal-body">
+
+            <div class="form-group">
+                <div class="input-group">
+                    <p>Título de la Reunión: {{meets.name}} <br> </p> <br>
+                    <p> Fecha de Creación: {{meets.cdate}} <br>
+                    Fecha de Realización: {{meets.rdate}}</p>
+
+                </div>
+            </div>
+            <div class="form-group">
+              
+                <div class="input-group">
+                    <table>
+                        <tr>
+                            <th>
+                                <p> Seleccione las Personas que asistieron </p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <app-checkusers (mesemmit)="getMessage($event)"></app-checkusers>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th> <label> Personas que Asistieron: </label></th>
+                        </tr>
+                        <tr>
+                            <th> {{rec}}</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="paragraph">Resumen de la Reunión: </label>
+
+                <textarea name="paragraph"  formControlName="paragraph" [(ngModel)]="meets.paragraph" class="form-control" minlength="4" maxlength="300" cols="30" rows="2"
+                    autofocus> </textarea>
+             
+            </div>
+
+    </div>
+</form>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-lg btn-outline-sucess btn-info" (click)="[updatemeet(),close(content)]">
+            <label> Modificar </label>
+        </button>
+    </div>
+    <div class="card-body pt-0">
+
+    </div>
+</ng-template>
+<div class="col mr-2">
+    <ng-container *ngIf="owo==true else edita">
+        <button class="btn btn-white owo" type="button" (click)="open(content)">Modificar Reunión
+            <i class="fas fa-handshake fa-1x text-black "></i>
+        </button>
+    </ng-container>
+    <ng-template #edita>
+        <div class="card text-center">
+            <div class="card-header h3">
+                ¡Aviso!
+            </div>
+            <div class="card-body">
+                <p class="card-text h4">¿Está seguro de modificar la información?</p>
+
+            </div>
+            <div class="card-footer text-muted">
+                <a routerLink (click)="open(content)" class="btn btn-info" style="margin-right: 30px;"
+                    (click)="open(content)">Si</a>
+                <a routerLink="/meetings/list" (click)="close(content)" class="btn btn-secondary">No</a>
+            </div>
+        </div>
+    </ng-template>

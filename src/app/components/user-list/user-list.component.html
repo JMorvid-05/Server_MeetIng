@@ -1,0 +1,91 @@
+<!--<div class="col-md-4"  *ngFor="let person of persons">
+    <div class="card text-center">
+        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center" >
+            Correo Electrónico: {{person.email}}
+           <button class="btn btn-danger" (click)="deleteperson(person._id)">
+               <i class="far fa-trash-alt"></i>
+           </button>
+        </div>
+        <div class="card-body">
+            Nombres: {{person.fname}} 
+           Apellidos: {{person.lname}} 
+           Identificación: {{person.cc}} 
+          
+          <div class="card-footer">
+           <a [routerLink]="['/persons/edit',person._id]"class="btn btn-info btn-block" > Modificar</a>
+        </div>
+        </div>
+    </div>
+</div>
+Grid row-->
+
+
+<div class="col-xl-6 col-md-6 mb-3" style="color: aliceblue;" *ngFor="let person of persons">
+  <div class="card border-left-white shadow h-200 py-1">
+    <div class="card-body">
+      <div class="row no-gutters align-items-center">
+        <div class="col mr-5">
+          <div class="h5 mb-0 font-weight-bold text-white"> {{person.fname}} {{person.lname}}</div>
+          <div class="h5 mb-0 font-weight-bold text-white">CC: {{person.cc}} </div>
+          <div class="h5 mb-0 font-weight-bold text-white">Email: {{person.email}}</div>
+        </div>
+        <div class="col-auto">
+          <ng-container *ngIf="person.country=='CO'">
+            <i><img src="../../../assets/colombia.svg" style="width: 50px; height: 50px;" alt="icon"></i>
+          </ng-container>
+          <ng-container *ngIf="person.country=='CH'">
+            <i><img src="../../../assets/chile.svg" style="width: 50px; height: 50px;" alt="icon"></i>
+          </ng-container>
+          <ng-container *ngIf="person.country=='CR'">
+            <i><img src="../../../assets/costa-rica.svg" style="width: 50px; height: 50px;" alt="icon"></i>
+          </ng-container>
+          <ng-container *ngIf="person.country=='RD'">
+            <i><img src="../../../assets/republica-dominicana.svg" style="width: 50px; height: 50px;" alt="icon"></i>
+          </ng-container>
+        </div>
+        <div class="card-footer" *ngIf="show">
+          <button [routerLink]="['/persons/edit',person._id]" class="btn  btn-info btn-block try2">
+            <i class="fas fa-sync-alt"></i>
+          </button> <br>
+          <button class="btn btn-danger btn-block  try" (click)="open(content)">
+            <i class="far fa-trash-alt"></i>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title " style="text-align: center;" id="modal-basic-title"> <i
+          class="fas fa-exclamation-triangle"></i>
+        ¡Alerta!
+      </h4>
+      <button type="button" class="close" aria-label="Close" (click)="[close(content),modal.dismiss()]">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <p class="card-text h4">¿Está seguro de eliminar al usuario?</p>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a routerLink="persons/list" (click)="open(content)" class="btn btn-info" style="margin-right: 30px;"
+        (click)="[ deleteperson(person._id),close(content)]">Si</a>
+
+      <a routerLink="/persons/list" (click)="close(content)" class="btn btn-secondary">No</a>
+    </div>
+
+  </ng-template>
+</div>

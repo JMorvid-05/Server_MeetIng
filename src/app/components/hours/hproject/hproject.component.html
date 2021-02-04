@@ -1,0 +1,20 @@
+<form  style="color: aliceblue;">
+    <div class="col-md-4 offset-md-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="form-group">
+            <label for="description">Nombre del Proyecto:</label>
+            <input type="text" [(ngModel)]="proj.name" name="project" class="form-control" autofocus autocomplete="on">
+          </div>
+          <div class="form-group">
+            <label for="description">Descripción de lo realizado en este día:</label>
+            <textarea type="text" [(ngModel)]="proj.description" name="description" class="form-control" autofocus autocomplete="off" cols="30"
+              rows="6"> </textarea>
+          </div>
+          <button class="btn btn-primary btn-block" type="button" (click)="sendproj()" >
+            Siguiente
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>

@@ -1,0 +1,42 @@
+
+     <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+        <thead>
+          <tr>
+            <td>Fecha de Creación</td>
+            <td>Fecha</td>
+            <th>Correo Electrónico</th>
+            <th>Nombre del Projecto</th>
+            <th>Descripción</th>
+            <th>País</th>
+            <th>Área</th>
+            <th>Cliente</th>
+            <th>Horas Gastadas</th>
+            <th>Fecha de Ejecución</th>
+
+            <th>Persona que lo requirió</th>
+            <th>Frente</th>
+           
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let hour of hours">
+            <td>{{hour.dateat}}</td>
+            <td>{{hour.fech}}</td>
+            <td>{{hour.email}}</td>
+            <td>{{hour.project}}</td>
+            <td>{{hour.description}}</td>
+            <td>{{hour.country}}</td>
+            <td>{{hour.area}}</td>
+            <td>{{hour.client}}</td>
+            <td>{{hour.hoursg}}</td>
+            <td>{{hour.datexec}}</td>
+
+            <td>{{hour.personqr}}</td>
+            <td>{{hour.frente}}</td>
+         
+            
+          </tr>
+         
+        </tbody>
+      </table>

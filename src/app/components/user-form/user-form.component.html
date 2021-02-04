@@ -1,0 +1,125 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title " style="text-align: center;" id="modal-basic-title"> <i class="fas fa-users"></i>
+      <label *ngIf="edit==false; else oth">  Agregar Persona</label>
+      <ng-template #oth> Modificar persona </ng-template>
+    </h4>
+    <button type="button" class="close" aria-label="Close" (click)="[close(),modal.dismiss()]">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+ <!-- <form [formGroup]="inputsForm">-->
+  <div class="modal-body">
+      <div class="form-group">
+        <label for="fname">Nombres Completos</label>
+        <div class="input-group">
+          <input type="text"   minlength="3" maxlength="35" name="fname" [(ngModel)]="person.fname" class="form-control" placeholder="Digite su nombre"
+            autocomplete="off">
+         <!--  formControlName="fname" <div class="alert alert-danger" role="alert" *ngIf="inputsForm.get('fname').errors!=null">
+                Este campo es requerido, no puede estar en blanco
+             </div>-->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lname">Digite los apellidos completo</label>
+        <div class="input-group">
+          <input type="text" name="lname"  minlength="3" maxlength="35" [(ngModel)]="person.lname" class="form-control"
+            placeholder="Digite su apellido" autocomplete="off">
+         <!-- formControlName="lname"  <div class="alert alert-danger" role="alert" *ngIf="inputsForm.get('lname').errors!=null">
+              Este campo es requerido, no puede estar en blanco
+             </div>-->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Digite el correo electrónico (Empresa)</label>
+        <div class="input-group">
+          <input type="text" name="email"  minlength="3" maxlength="40"[(ngModel)]="person.email" class="form-control"
+            placeholder="Digite su correo electrónico de la empresa" autocomplete="off">
+           <!--  formControlName="email" <div class="alert alert-danger" role="alert" *ngIf="inputsForm.get('email').errors!=null">
+                  El tipo de correo que se admite únicamente es el de la empresa
+             </div>-->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cc">Digite la identificación</label>
+        <div class="input-group">
+          <input type="text" name="cc"  minlength="5" maxlength="12" [(ngModel)]="person.cc" class="form-control"
+            placeholder="Digite su identificación (CC)" autocomplete="off">
+         <!--  formControlName="cc" <div class="alert alert-danger" role="alert" *ngIf="inputsForm.get('name').errors!=null">
+              Sólo se permite números; este campo es requerido
+             </div>-->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="country">Seleccione el país donde se encuentra trabajando</label>
+
+        <div class="row list">
+
+          <button class="bco btn separar" (click)="country('CO')"></button>
+          <button class="bch btn separar" (click)="country('CH')"></button>
+          <button class="bcr btn separar" (click)="country('CR')"></button>
+          <button class="brd btn separar" (click)="country('RD')"></button>
+
+          <!--
+          <i><img src="../../../assets/colombia.svg" alt="icon"></i>
+          <i><img src="../../../assets/chile.svg"  alt="icon"></i>
+          <i><img src="../../../assets/costa-rica.svg"  alt="icon"></i>
+          <i><img src="../../../assets/republica-dominicana.svg" alt="icon"></i>
+            -->
+        </div>
+      </div>
+      <ng-container *ngIf="val()==true">
+        <a href="#" class="badge badge-success">Usted ha seleccionado {{ctry}} </a>
+      </ng-container>
+    
+  </div>
+  <!--  </form>-->
+  <div class="modal-footer">
+    <button type="button" class="btn btn-lg btn-outline-sucess btn-info"
+      (click)="[edit ? updateduser() : saveuser(),close(content)]">
+      <label *ngIf="edit==false; else otd"> Agregar </label>
+      <ng-template #otd>Modificar </ng-template>
+    </button>
+  </div>
+  <div class="card-body pt-0">
+
+  </div>
+</ng-template>
+<div class="col mr-2">
+  <ng-container *ngIf="owo==true else edita">
+  <button class="btn btn-white owo" type="button" (click)="open(content)">Agregar Persona
+    <i class="fas fa-user-plus fa-1x text-black "></i>
+  </button> 
+</ng-container>
+<ng-template #edita>
+  <div class="card text-center">
+    <div class="card-header h3">
+      ¡Aviso!
+    </div>
+    <div class="card-body">
+      <p class="card-text h4">¿Está seguro de modificar la información?</p>
+
+    </div>
+    <div class="card-footer text-muted">
+      <a routerLink (click)="open(content)" class="btn btn-info" style="margin-right: 30px;"
+        (click)="open(content)">Si</a>
+      <a routerLink="/persons/list" (click)="close(content)" class="btn btn-secondary">No</a>
+    </div>
+  </div>
+</ng-template>
+
+
+
+</div>
+
+<hr>
+
+
+<!--  <div class="col-md-4">
+        <div class="card card-body text-center">
+            <p>Nombre: {{person.fname==''?'Nombres ': person.fname}}</p>
+            <p>Apellidos: {{person.lname==''?'Apellidos ': person.lname}}</p>
+            <p>Correo Electrónico: {{person.email==''?'Correo Electrónico ': person.email}}</p>
+            <p>CC: {{person.cc==''?'CC ': person.cc}}</p>
+        </div>
+    </div>-->

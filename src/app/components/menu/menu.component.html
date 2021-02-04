@@ -1,0 +1,66 @@
+
+    <div class="row" style="margin-top:50px;">
+        <div class="col-xl-4 col-md-6 mb-2">
+          <div class="card border-left-yellow shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-white"> Horas</div><hr>
+
+                  <button class="btn btn-white owo" type="button" routerLink="/hours/save">Reportar Horas
+                    <i class="fas fa-clock fa-1x text-black "></i>
+                  </button> 
+                  <button class="btn btn-white sty" routerLink="/hours/list" type="button">Consultar Horas
+                    <i class="fas fa-search fa-1x text-black "></i>
+                  </button>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-clock fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-6 mb-2">
+          <div class="card border-left-blue shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-white">Reuniones</div><hr>
+                  <ng-container *ngIf="show;">
+                  <app-meet-create></app-meet-create>
+                 </ng-container>
+                  <button class="btn btn-white sty" routerLink="/meetings/list" type="button">Consultar Reunión
+                    <i class="fas fa-search fa-1x text-black "></i>
+                  </button>
+                </div>
+                  <div class="col-auto">
+                  <i class="fas fa-handshake fa-2x text-gray-300"></i>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6 mb-2">
+          <div class="card border-left-red shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-white">Personas</div><hr>
+                <div *ngIf="show;">
+                  <app-user-form ></app-user-form>
+                </div>
+                  <button class="btn btn-white sty" routerLink="/persons/list" type="button">Consultar Persona
+                    <i class="fas fa-search fa-1x text-black "></i>
+                  </button>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-user-tie fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  

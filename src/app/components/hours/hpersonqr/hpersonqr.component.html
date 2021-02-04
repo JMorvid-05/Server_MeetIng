@@ -1,0 +1,383 @@
+<form style="color: aliceblue;">
+  <p style="text-align: center; color: aliceblue; font-size: 1.5em;">Seleccione la persona que lo requirió</p>
+  <div class="container-fluid">
+    <div class="row" style="margin-top:50px;">
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='CR'">
+        <div class="card border-left-white shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Alberto Lang</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Alberto Lang')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='C'">
+        <div class="card border-left-yellow shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Alexandra Yance</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Alexandra Yance')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country!=null">
+        <div class="card border-left-green shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Andrés Araoz</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Andrés Araoz')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country!=null">
+        <div class="card border-left-green shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Carlos Sánchez</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+                <button class="btn btn-white " type="button" (click)="sendperson('Carlos Sánchez')" >
+                  <i class="fas fa-check-circle fa-2x text-black owo"></i>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country!=null">
+        <div class="card border-left-green shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Francisco Dieguez</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Francisco Dieguez')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='Cl'">
+        <div class="card border-left-red shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Hugo Díaz</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Hugo Díaz')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row" style="margin-top:50px;">
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country!=null">
+        <div class="card border-left-green shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Maritza García</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Maritza García')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='Cl'">
+        <div class="card border-left-red shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Nemecio Reyes</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Nemecio Reyes')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country!=null">
+        <div class="card border-left-green shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Pablo Bendel</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Pablo Bendel')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country!=null">
+        <div class="card border-left-green shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Víctor Mendoza</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Víctor Mendoza')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='C'">
+        <div class="card border-left-yellow shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Diana Barahona</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Diana Barahona')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1"*ngIf="country=='CR'">
+        <div class="card border-left-white shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Fiorella Guevara</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Fiorella Guevara')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+     
+
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row" style="margin-top:50px;">
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='C'">
+        <div class="card border-left-yellow shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Gabriel Novoa</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Gabriel Novoa')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='C'">
+        <div class="card border-left-yellow shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Iván Hastamorir</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Iván Hastamorir')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='C'">
+        <div class="card border-left-yellow shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Jessica Orozco</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Jessica Orozco')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='C'">
+        <div class="card border-left-yellow shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Juan Carlos Nossa</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Juan Carlos Nossa')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='CR'">
+        <div class="card border-left-white shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Jose Pablo</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Jose Pablo')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='CR'">
+        <div class="card border-left-white shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Verny Herrera</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Verny Herrera')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='CR'">
+        <div class="card border-left-white shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Víctor Ortega</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Víctor Ortega')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row" style="margin-top:50px;">
+    
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='C'">
+        <div class="card border-left-yellow shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Leila Pasachoa</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Leila Pasachoa')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='C'">
+        <div class="card border-left-yellow shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Mauricio Navarrete</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Mauricio Navarrete')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-2 mb-1" *ngIf="country=='C'">
+        <div class="card border-left-yellow shadow h-100 py-1">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-white">Michel Tachack Suescun</div>
+              </div>
+              <div class="col-auto" style="background-color: aliceblue;border-radius: 10px;">
+              <button class="btn btn-white" type="button" (click)="sendperson('Michel Tachack Suescun')">
+                <i class="fas fa-check-circle fa-2x text-black owo"></i>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+</form>

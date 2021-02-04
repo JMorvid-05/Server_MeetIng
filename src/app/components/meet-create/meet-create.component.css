@@ -1,0 +1,14 @@
+.owo{
+    
+    border: 1px solid #1cc88a;
+    color: #1cc88a;
+}
+.owo:hover{
+    border: 1px solid #1cc88a;
+    color: #1cc88a;
+    background: rgba(0,43,54,0.95);
+    
+}
+.is-danger{
+    border-color: 1px red;
+}

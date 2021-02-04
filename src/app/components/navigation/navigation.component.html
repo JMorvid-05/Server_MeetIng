@@ -1,0 +1,56 @@
+
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+   
+        <a class="navbar-brand" routerLink="/menu" *ngIf="socialService.loggedIn(); else no">MeetING</a>
+      <ng-template #no>
+      <a class="navbar-brand" routerLink="/" >MeetING</a>
+      </ng-template>
+ 
+      <div class="collapse navbar-collapse" id="navbarNavDropdown" *ngIf="!socialService.loggedIn(); else log">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login"><i class="fas fa-door-closed"></i> Iniciar Sesión</a>
+          </li>
+        </ul>
+      </div>
+     
+      <ng-template #log>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/hours/save"><i class="fas fa-clock"></i> Horas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/meetings/list"><i class="fas fa-handshake"></i> Reuniones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/persons/list"><i class="fas fa-user-tie"></i> Personas</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/login" (click)="logout()"><i class="fas fa-door-open"></i> Cerrar Sesión</a>
+            </li>
+            
+        </ul>
+        
+      </div>
+    </ng-template>
+
+      
+    </div>
+    </nav> -->
+    <mat-toolbar style="background-color: #073642;" class="mat-elevation-z7">
+      <ng-container *ngIf="!socialService.loggedIn(); else no">
+      <a class="navbar-brand  nav-link letrat" routerLink="/">Meeting</a>
+      <a mat-button class="navbar-nav ml-auto nav-link letra" routerLink="/login"><i class="fas fa-door-closed"></i> Iniciar Sesión</a>
+      </ng-container>
+      <ng-template #no>
+      <a class="navbar-brand nav-link letrat" routerLink="/menu" >Menú</a>
+      <a mat-button class="navbar-nav ml-auto nav-link letra" routerLink="/hours/save"><i class="fas fa-clock"></i> Horas</a>
+      <a mat-button class="nav-link letra" routerLink="/meetings/list"><i class="fas fa-handshake"></i> Reuniones</a>
+      <a  mat-button class="nav-link letra" routerLink="/persons/list"><i class="fas fa-user-tie"></i> Personas</a>
+      <a mat-raised-button color="accent" class="nav-link letra" routerLink="/login" (click)="logout()"><i class="fas fa-door-open"></i> Salir</a>
+      </ng-template>
+  
+
+     </mat-toolbar>

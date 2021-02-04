@@ -1,0 +1,45 @@
+<div class="col-md-4" style="margin-top:10px;" *ngFor="let meet of meetings">
+    <div class="card text-white  bg-info mb-3" style="max-width: 18rem;margin-top:10px;">
+        <div class="card-header" style="text-align: center;">Reunión: {{meet.name}}
+        </div>
+        <div class="card-header  d-flex justify-content-between ">
+            <button *ngIf="show" class="btn btn-dark " [routerLink]="['/meetings/edit',meet._id]"> <i
+                    class="fas fa-edit"></i></button>
+            <i class="far fa-calendar-alt"> {{meet.cdate}}</i>
+            <button *ngIf="show" class="btn btn-danger"(click)="open(content)">
+                <i class="far fa-trash-alt"></i>
+            </button>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Programada para: {{meet.rdate}} </h5>
+            <h5 class="card-title">Hora de la reunión: {{meet.hour}} </h5>
+            <p class="card-title"> Personas que asistieron: {{meet.person}} </p>
+            <p class="card-text"> Resumen: {{meet.paragraph}}</p>
+        </div>
+    </div>
+
+    <ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title " style="text-align: center;" id="modal-basic-title"> <i
+              class="fas fa-exclamation-triangle"></i>
+            ¡Alerta!
+          </h4>
+          <button type="button" class="close" aria-label="Close" (click)="[close(content),modal.dismiss()]">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <p class="card-text h4">¿Está seguro de eliminar la reunión?</p>
+          </form>
+        </div>
+ 
+        <div class="modal-footer" >
+          <a  routerLink="meetings/list" (click)="open(content)" class="btn btn-info" style="margin-right: 30px;"
+            (click)="[ deletemeet(meet._id),close(content)]">Si</a>
+    
+          <a  routerLink="/meetings/list" (click)="close(content)" class="btn btn-secondary">No</a>
+        </div>
+
+    
+      </ng-template>

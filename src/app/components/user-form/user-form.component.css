@@ -1,0 +1,75 @@
+
+
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+.separar{
+    margin-top: 20px;
+    margin-left: 60px;
+}
+.bco:hover,.bch:hover,.bcr:hover,.brd:hover{
+ width: 52px;
+ height: 52px;
+ border: 3px solid aliceblue;
+}
+.bco{
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    background-image: url("../../../assets/colombia.svg");
+    border-radius: 30px;
+   
+
+}
+.try2{
+    width: 55px;
+    border-bottom: 10px;
+    background: #ECF0F1;
+    border: 1px #3498DB;
+    color: #3498DB;
+}
+.try2:hover{
+    color: #ECF0F1;
+    background: #3498DB;
+    border: 1px #ECF0F1;
+}
+.bch{
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    background-image: url("../../../assets/chile.svg");
+    border-radius: 30px;
+   
+
+}
+.bcr{
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    background-image: url("../../../assets/costa-rica.svg");
+    border-radius: 30px;
+   
+
+}
+.brd{
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    background-image: url("../../../assets/republica-dominicana.svg");
+    border-radius: 30px;
+   
+
+}
+.owo{
+    
+    border: 1px solid #1cc88a;
+    color: #1cc88a;
+}
+.owo:hover{
+    border: 1px solid #1cc88a;
+    color: #1cc88a;
+    background: rgba(0,43,54,0.95);
+    
+}

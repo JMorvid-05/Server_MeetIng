@@ -1,0 +1,28 @@
+i{
+    padding-right: 4px;
+
+}
+button{
+    padding-right: 4px;
+    
+}
+.try{
+    background: #ECF0F1;
+    border: 1px #FF0039;
+    color: #FF0039;
+}
+.try:hover{
+    background: #FF0039;
+    margin: 1px solid #FF0039 ;
+    color: #ECF0F1;
+}
+.try2{
+    background: #ECF0F1;
+    border: 1px #3498DB;
+    color: #3498DB;
+}
+.try2:hover{
+    color: #ECF0F1;
+    background: #3498DB;
+    border: 1px #ECF0F1;
+}

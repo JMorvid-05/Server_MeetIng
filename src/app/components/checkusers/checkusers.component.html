@@ -1,0 +1,6 @@
+<form [formGroup]="myForm">
+    <div *ngFor="let per of person">
+		<input type="checkbox"  (change)="onChange(per.fname+' '+per.lname, $event.target.checked)"> {{per.fname}} {{per.lname}}<br>
+	</div>
+	<button (click)="SendMeet(send)" class="btn btn-info btn-block">Guardar</button>
+</form>

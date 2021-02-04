@@ -1,0 +1,16 @@
+<form  style="color: aliceblue;">
+    <div class="col-md-4 offset-md-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="form-group">
+            <label for="description">Horas Gastadas:</label>
+            <input type="text" [(ngModel)]="hor.cant" name="hours" class="form-control" autofocus>
+          </div>
+        
+          <button class="btn btn-primary btn-block" type="button" (click)="sendhours()">
+            Siguiente
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>

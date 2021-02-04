@@ -1,0 +1,14 @@
+<form>
+  <p style="text-align: center; color: aliceblue; font-size: 1.5em;">Seleccione la Fecha de Ejecución</p>
+  <div class="col-md-4 offset-md-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="form-group">
+          <ngb-datepicker #dp [(ngModel)]="model" [ngModelOptions]="{standalone: true}" (navigate)="date = $event.next"
+            style="margin-left: 10%; background-color: aliceblue;"></ngb-datepicker>
+        </div>
+        <button class="btn btn-primary form-control" type="button" (click)="sendexec()">Siguiente</button>
+      </div>
+    </div>
+  </div>
+</form>
